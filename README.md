@@ -1,4 +1,4 @@
-<img width="460" height="500" alt="Menuicon" src="https://github.com/user-attachments/assets/0805481a-0f57-4211-9e20-6618471e2335" /># Squeeze 🍋
+<# Squeeze 🍋
 
 > Instant Windows file compression. Drag any file, hold Shift, drop on a wedge.
 
