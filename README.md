@@ -1,4 +1,4 @@
-<# Squeeze 🍋
+# Squeeze 🍋
 
 > Instant Windows file compression. Drag any file, hold Shift, drop on a wedge.
 
