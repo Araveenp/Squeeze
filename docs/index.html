@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Squeeze: The instant Windows file compressor — Free & Open Source</title>
+  <meta name="description" content="Drag any file in Windows Explorer, press Shift, and drop it on a wedge. Non-destructive, 100% offline, native Windows utility." />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Squeeze: The instant Windows file compressor" />
+  <meta property="og:description" content="Drag a file in Explorer, press Shift, drop on a wedge. Instant, non-destructive, featherweight compression." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://araveenp.github.io/Squeeze/" />
+  <meta property="og:image" content="icon.png" />
+  
+  <link rel="icon" type="image/png" href="icon.png" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating Right Table of Contents (PhotoCraft style) -->
+  <ul class="floating-toc" aria-label="Table of Contents">
+    <li><a href="#hero" class="active">Overview</a></li>
+    <li><a href="#showcase">Demo</a></li>
+    <li><a href="#highlights">Highlights</a></li>
+    <li><a href="#wedges">The Wedges</a></li>
+    <li><a href="#download">Get It</a></li>
+  </ul>
+
+  <!-- Top Sticky Navigation -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a class="nav-brand" href="#hero">
+          <img src="icon.png" alt="Squeeze" class="brand-icon" />
+          <span>Squeeze</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#showcase">Simulator</a></li>
+          <li><a href="#highlights">Highlights</a></li>
+          <li><a href="#wedges">The Wedges</a></li>
+          <li><a href="#download">Download</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <span class="hud-pill nav-badge-pill" style="align-self: center; margin-right: 12px;">v1.0.0 · WIN64</span>
+        <a href="https://github.com/Araveenp/Squeeze" target="_blank" rel="noopener noreferrer" class="nav-links" style="display:flex;">
+          <span style="display:flex; align-items:center; padding: 0 16px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-transform: uppercase;">
+            <svg style="margin-right: 6px;" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </span>
+        </a>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+          <svg id="theme-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+        </button>
+        <a href="https://github.com/Araveenp/Squeeze/releases/latest/download/SqueezeSetup.exe" class="nav-action-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 17V3"></path><path d="m6 11 6 6 6-6"></path><path d="M19 21H5"></path></svg>
+          Get Squeeze
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================================
+       01 / HERO SECTION
+       ====================================================================== -->
+  <section id="hero" class="section-wrapper">
+    <div class="section-inner">
+      <span class="tick tick-tl"></span>
+      <span class="tick tick-tr"></span>
+
+      <!-- Eyebrow Bar -->
+      <div class="eyebrow-bar">
+        <p class="hud-label" style="color: var(--muted);"><span style="color: var(--faint);">01</span> <span style="margin: 0 6px; color: var(--faint);">/</span> Squeeze</p>
+        <p class="hud-label" style="color: var(--faint);">Windows Native · Fast File Compressor</p>
+      </div>
+
+      <!-- Hero Main Content -->
+      <div class="hero-content">
+        <div class="app-badge-group">
+          <img src="icon.png" alt="Squeeze Icon" class="hero-app-icon" />
+          <div class="app-id-pill">
+            <span class="app-num">01</span>
+            <span class="app-name-text">Squeeze</span>
+          </div>
+        </div>
+
+        <h1 class="hero-headline">
+          The file compressor you always <span class="accent-word">wanted</span>.
+        </h1>
+
+        <p class="hero-subtitle">
+          Drag any file in Windows Explorer, hold Shift, and drop it on a wedge. Zero bloated windows, 100% offline, and originals are never touched.
+        </p>
+
+        <!-- CTAs -->
+        <div class="cta-group">
+          <div class="cta-buttons">
+            <a href="https://github.com/Araveenp/Squeeze/releases/latest/download/SqueezeSetup.exe" class="btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 17V3"></path><path d="m6 11 6 6 6-6"></path><path d="M19 21H5"></path></svg>
+              Download SqueezeSetup.exe
+            </a>
+            <a href="https://github.com/Araveenp/Squeeze" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              View on GitHub
+            </a>
+          </div>
+
+          <p class="cta-specs hud-label">
+            Windows 10 / 11 · 64-Bit Installer (47.4 MB) · Free and Open Source (MIT)
+          </p>
+
+          <!-- Share Strip (PhotoCraft HUD Style) -->
+          <div class="share-strip">
+            <span class="hud-label" style="color: var(--faint);">Share</span>
+            <button id="share-copy-link" type="button">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              <span class="share-label">Copy link</span>
+            </button>
+            <a href="https://x.com/intent/post?text=Squeeze%3A%20Instant%20drag%20and%20drop%20Windows%20file%20compression.&url=https%3A%2F%2Faraveenp.github.io%2FSqueeze%2F" target="_blank" rel="noopener noreferrer">X</a>
+            <a href="https://www.reddit.com/submit?url=https%3A%2F%2Faraveenp.github.io%2FSqueeze%2F&title=Squeeze%3A%20Instant%20drag%20and%20drop%20Windows%20file%20compression" target="_blank" rel="noopener noreferrer">Reddit</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Faraveenp.github.io%2FSqueeze%2F" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================================
+           SHOWCASE / INTERACTIVE SIMULATOR FRAME
+           ================================================================== -->
+      <figure id="showcase" class="showcase-figure">
+        <div class="showcase-header">
+          <figcaption class="hud-label" style="color: var(--muted);">Radial Wedge HUD — Drag & Hold Shift</figcaption>
+          <p class="hud-label" style="color: var(--faint);">Interactive Simulator</p>
+        </div>
+
+        <div class="simulator-container">
+          <!-- Interactive Stage -->
+          <div class="simulator-stage">
+            <div class="hint-press-shift hud-label">
+              <span>Interactive: Hover or Click Wedges</span>
+              <span class="kbd">Shift</span>
+            </div>
+
+            <div class="radial-hud">
+              <svg class="hud-svg" viewBox="0 0 400 400">
+                <!-- Inner Wedges (Category Ring) -->
+                <!-- Quality Inner -->
+                <path class="wedge-path inner-default" d="M 106.7 141.7 A 110 110 0 0 1 293.3 141.7 L 245.8 171.4 A 54 54 0 0 0 154.2 171.4 Z" />
+                <text x="200" y="125" class="wedge-text">QUALITY</text>
+
+                <!-- Size Inner -->
+                <path class="wedge-path" d="M 297.1 148.4 A 110 110 0 0 1 203.8 309.9 L 201.9 254.0 A 54 54 0 0 0 247.7 174.6 Z" />
+                <text x="260" y="228" class="wedge-text">SIZE</text>
+
+                <!-- ZIP Inner -->
+                <path class="wedge-path" d="M 196.2 309.9 A 110 110 0 0 1 102.9 148.4 L 152.3 174.6 A 54 54 0 0 0 198.1 254.0 Z" />
+                <text x="140" y="228" class="wedge-text">ZIP</text>
+
+                <!-- Outer Wedges: Quality Mode (3 Slices) -->
+                <path class="wedge-path wedge-interactive" data-wedge-id="q-low" d="M 43.1 102.0 A 185 185 0 0 1 136.7 26.2 L 160.3 91.0 A 116 116 0 0 0 101.6 138.5 Z" />
+                <text x="105" y="83" class="wedge-text">Low</text>
+
+                <path class="wedge-path wedge-interactive active" data-wedge-id="q-med" d="M 142.8 24.1 A 185 185 0 0 1 257.2 24.1 L 235.8 89.7 A 116 116 0 0 0 164.2 89.7 Z" />
+                <text x="200" y="52" class="wedge-text">Medium ★</text>
+
+                <path class="wedge-path wedge-interactive" data-wedge-id="q-high" d="M 263.3 26.2 A 185 185 0 0 1 356.9 102.0 L 298.4 138.5 A 116 116 0 0 0 239.7 91.0 Z" />
+                <text x="295" y="83" class="wedge-text">High</text>
+
+                <!-- Outer Wedges: Size Mode (4 Slices) -->
+                <path class="wedge-path wedge-interactive" data-wedge-id="s-100k" d="M 363.3 113.1 A 185 185 0 0 1 385.0 196.8 L 316.0 198.0 A 116 116 0 0 0 302.4 145.5 Z" />
+                <text x="348" y="160" class="wedge-text">100 KB</text>
+
+                <path class="wedge-path wedge-interactive" data-wedge-id="s-500k" d="M 385.0 203.2 A 185 185 0 0 1 363.3 286.9 L 302.4 254.5 A 116 116 0 0 0 316.0 202.0 Z" />
+                <text x="348" y="242" class="wedge-text">500 KB</text>
+
+                <path class="wedge-path wedge-interactive" data-wedge-id="s-1m" d="M 360.2 292.5 A 185 185 0 0 1 300.8 355.2 L 263.2 297.3 A 116 116 0 0 0 300.5 258.0 Z" />
+                <text x="312" y="306" class="wedge-text">1 MB</text>
+
+                <path class="wedge-path wedge-interactive" data-wedge-id="s-2m" d="M 295.3 358.6 A 185 185 0 0 1 206.5 384.9 L 204.0 315.9 A 116 116 0 0 0 259.7 299.4 Z" />
+                <text x="248" y="348" class="wedge-text">2 MB</text>
+
+                <!-- Outer Wedge: ZIP Mode -->
+                <path class="wedge-path wedge-interactive" data-wedge-id="zip" d="M 193.5 384.9 A 185 185 0 0 1 36.7 113.1 L 97.6 145.5 A 116 116 0 0 0 196.0 315.9 Z" />
+                <text x="75" y="270" class="wedge-text">Archive.zip</text>
+              </svg>
+
+              <!-- Center Hole (Displays thumbnail & source file info) -->
+              <div class="hud-center">
+                <div class="center-file-icon">🖼️</div>
+                <div class="center-filename">vacation.jpg</div>
+                <div class="center-filesize">4.8 MB</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulator Feedback Sidebar -->
+          <div class="simulator-panel">
+            <div>
+              <p class="panel-title">Compression Engine</p>
+              <h3 id="sim-stat-selected" class="panel-headline">Quality: Medium (q=65)</h3>
+
+              <div class="sim-stat-box">
+                <div class="sim-row">
+                  <span class="sim-label">Original Size</span>
+                  <span id="sim-stat-original" class="sim-val">4.8 MB</span>
+                </div>
+                <div class="sim-row">
+                  <span class="sim-label">Compressed</span>
+                  <span id="sim-stat-output" class="sim-val" style="color: var(--accent-light);">1.1 MB</span>
+                </div>
+                <div class="sim-row">
+                  <span class="sim-label">Space Saved</span>
+                  <span id="sim-stat-saved" class="sim-val sim-saved">-77.0%</span>
+                </div>
+                <!-- Mini Progress Bar -->
+                <div style="width: 100%; height: 4px; background: rgba(255,255,255,0.08); margin-top: 12px; border-radius: 2px; overflow: hidden;">
+                  <div id="sim-progress-bar" style="width: 23%; height: 100%; background: var(--accent); transition: width 0.3s ease;"></div>
+                </div>
+              </div>
+
+              <div class="sim-output-file">
+                <span class="icon">✨</span>
+                <div>
+                  <div class="hud-label" style="font-size: 9px; color: var(--faint);">Generated File (Original Untouched)</div>
+                  <div id="sim-file-out" class="sim-output-file-name">vacation_photo_compressed.jpg</div>
+                </div>
+              </div>
+            </div>
+
+            <p class="sim-controls-note">
+              Drop on the inner ring for the highlighted default (Medium / 1 MB). Squeeze runs silently in the system tray and wakes on Shift.
+            </p>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       02 / HIGHLIGHTS SECTION ("What's inside.")
+       ====================================================================== -->
+  <section id="highlights" class="section-wrapper">
+    <div class="section-inner">
+      <span class="tick tick-tl"></span>
+      <span class="tick tick-tr"></span>
+
+      <!-- Eyebrow Bar -->
+      <div class="eyebrow-bar">
+        <p class="hud-label" style="color: var(--muted);"><span style="color: var(--faint);">02</span> <span style="margin: 0 6px; color: var(--faint);">/</span> Highlights</p>
+        <p class="hud-label" style="color: var(--faint);">Architecture · System Design</p>
+      </div>
+
+      <div class="section-headline-area">
+        <h2 class="section-title">
+          What's <span class="accent-word">inside.</span>
+        </h2>
+      </div>
+
+      <!-- 6-Card HUD Grid (PhotoCraft style) -->
+      <div class="highlights-grid">
+        <!-- 01 -->
+        <div class="highlight-card">
+          <span class="card-num">01</span>
+          <h3 class="card-title">Zero-Window Workflow</h3>
+          <p class="card-desc">
+            No slow windows to launch, no file picker dialogs to navigate. Simply drag any file in Windows Explorer or on your Desktop, hold Shift, and drop it on the radial menu.
+          </p>
+        </div>
+
+        <!-- 02 -->
+        <div class="highlight-card">
+          <span class="card-num">02</span>
+          <h3 class="card-title">Non-Destructive Guarantee</h3>
+          <p class="card-desc">
+            Your original files are never overwritten or deleted. Squeeze always saves compressed output side-by-side as <code>name_compressed.ext</code> with automatic conflict numbering.
+          </p>
+        </div>
+
+        <!-- 03 -->
+        <div class="highlight-card">
+          <span class="card-num">03</span>
+          <h3 class="card-title">Multi-Format Intelligence</h3>
+          <p class="card-desc">
+            Lossy and lossless compression across JPEG, WebP, PNG (PNGQuant-style palette quantizing), HEIC, TIFF, multi-page PDFs, MP4/MKV video, and MP3/FLAC audio with FFmpeg.
+          </p>
+        </div>
+
+        <!-- 04 -->
+        <div class="highlight-card">
+          <span class="card-num">04</span>
+          <h3 class="card-title">Target Size Snapping</h3>
+          <p class="card-desc">
+            Need an image under 500 KB or 1 MB for an email portal? Drop on that exact wedge. Squeeze lowers quality first, shrinking pixel dimensions only if strictly necessary.
+          </p>
+        </div>
+
+        <!-- 05 -->
+        <div class="highlight-card">
+          <span class="card-num">05</span>
+          <h3 class="card-title">100% Offline & Private</h3>
+          <p class="card-desc">
+            Zero cloud uploads, zero external telemetry, zero tracking. Everything runs locally on your machine's CPU/GPU. Your sensitive documents and photos remain entirely yours.
+          </p>
+        </div>
+
+        <!-- 06 -->
+        <div class="highlight-card">
+          <span class="card-num">06</span>
+          <h3 class="card-title">Featherweight Native</h3>
+          <p class="card-desc">
+            Built with PySide6 and direct Win32 hooks. Uses under 40 MB of RAM, sleeps at near-zero CPU in the system tray, and triggers instantly when needed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       03 / THE WEDGES SECTION
+       ====================================================================== -->
+  <section id="wedges" class="section-wrapper">
+    <div class="section-inner">
+      <span class="tick tick-tl"></span>
+      <span class="tick tick-tr"></span>
+
+      <!-- Eyebrow Bar -->
+      <div class="eyebrow-bar">
+        <p class="hud-label" style="color: var(--muted);"><span style="color: var(--faint);">03</span> <span style="margin: 0 6px; color: var(--faint);">/</span> The Wedges</p>
+        <p class="hud-label" style="color: var(--faint);">Radial Interaction Map</p>
+      </div>
+
+      <div class="section-headline-area">
+        <h2 class="section-title">
+          Built for <span class="accent-word">muscle memory.</span>
+        </h2>
+      </div>
+
+      <div class="wedges-overview">
+        <!-- Col 1 -->
+        <div class="wedge-col">
+          <span class="wedge-col-badge">Mode 01</span>
+          <h3 class="wedge-col-title">Quality Presets</h3>
+          <p class="wedge-col-desc">
+            Preserves full image resolution while optimizing quantization tables and chroma sub-sampling.
+          </p>
+          <div class="wedge-chips">
+            <div class="wedge-chip">
+              <span class="chip-name">Low (q=40)</span>
+              <span class="chip-hint">Smallest size</span>
+            </div>
+            <div class="wedge-chip">
+              <span class="chip-name">Medium (q=65) ★</span>
+              <span class="chip-hint">Default balanced</span>
+            </div>
+            <div class="wedge-chip">
+              <span class="chip-name">High (q=85)</span>
+              <span class="chip-hint">Near-lossless</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="wedge-col">
+          <span class="wedge-col-badge">Mode 02</span>
+          <h3 class="wedge-col-title">Target Size Limits</h3>
+          <p class="wedge-col-desc">
+            Guaranteed byte ceiling. Binary searches optimal compression quality, downscaling dimensions only if required.
+          </p>
+          <div class="wedge-chips">
+            <div class="wedge-chip">
+              <span class="chip-name">&lt; 100 KB</span>
+              <span class="chip-hint">Avatars & forms</span>
+            </div>
+            <div class="wedge-chip">
+              <span class="chip-name">&lt; 500 KB</span>
+              <span class="chip-hint">Email attachments</span>
+            </div>
+            <div class="wedge-chip">
+              <span class="chip-name">&lt; 1 MB ★</span>
+              <span class="chip-hint">Web standard</span>
+            </div>
+            <div class="wedge-chip">
+              <span class="chip-name">&lt; 2 MB</span>
+              <span class="chip-hint">High-res scans</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="wedge-col">
+          <span class="wedge-col-badge">Mode 03</span>
+          <h3 class="wedge-col-title">Instant ZIP</h3>
+          <p class="wedge-col-desc">
+            Drop multiple selected files or entire directories to combine them into a single clean <code>Archive.zip</code> container.
+          </p>
+          <div class="wedge-chips">
+            <div class="wedge-chip">
+              <span class="chip-name">Archive.zip</span>
+              <span class="chip-hint">Folder & file bundle</span>
+            </div>
+            <div class="wedge-chip">
+              <span class="chip-name">Inner Ring Drop</span>
+              <span class="chip-hint">One-step default drop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       04 / GET IT / DOWNLOAD SECTION
+       ====================================================================== -->
+  <section id="download" class="section-wrapper">
+    <div class="section-inner">
+      <span class="tick tick-tl"></span>
+      <span class="tick tick-tr"></span>
+
+      <!-- Eyebrow Bar -->
+      <div class="eyebrow-bar">
+        <p class="hud-label" style="color: var(--muted);"><span style="color: var(--faint);">04</span> <span style="margin: 0 6px; color: var(--faint);">/</span> Get It</p>
+        <p class="hud-label" style="color: var(--faint);">Windows Installer · Source Code</p>
+      </div>
+
+      <div class="get-it-grid">
+        <!-- Direct Installer Card -->
+        <div class="download-box">
+          <div>
+            <h2 class="download-head-title">Download Squeeze</h2>
+            <p class="download-desc">
+              Standalone native installer for Windows 10 and 11. No Python installation required. Double-click to install.
+            </p>
+
+            <div class="dl-card">
+              <div class="dl-card-top">
+                <div class="dl-file-info">
+                  <img src="icon.png" alt="Squeeze" class="dl-exe-icon" />
+                  <div>
+                    <div class="dl-name">SqueezeSetup.exe</div>
+                    <div class="dl-meta">v1.0.0 · 47.4 MB · 64-Bit</div>
+                  </div>
+                </div>
+                <span class="dl-tag">LATEST</span>
+              </div>
+
+              <a href="https://github.com/Araveenp/Squeeze/releases/latest/download/SqueezeSetup.exe" class="btn-primary" style="width: 100%; text-align: center;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 17V3"></path><path d="m6 11 6 6 6-6"></path><path d="M19 21H5"></path></svg>
+                Download Squeeze for Windows
+              </a>
+
+              <div class="smartscreen-notice">
+                <strong>Windows SmartScreen Note:</strong> Since Squeeze is free and open-source without an enterprise commercial signing certificate, Windows may show <em>"Windows protected your PC"</em>. Click <strong>More info → Run anyway</strong>.
+              </div>
+            </div>
+          </div>
+
+          <p class="hud-label" style="color: var(--faint);">
+            Optional: Audio/video conversion uses FFmpeg on PATH (<code>winget install Gyan.FFmpeg</code>).
+          </p>
+        </div>
+
+        <!-- Run from Source Code Card -->
+        <div class="source-box">
+          <h3 style="font-size: 20px; font-weight: 700; color: var(--ink-strong); margin-bottom: 8px;">Run from Source</h3>
+          <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">
+            Prefer running directly with Python? Squeeze requires Python 3.10+ and 4 lightweight packages.
+          </p>
+
+          <div class="code-block-wrapper">
+            <div class="code-header">
+              <span>POWERSHELL / BASH</span>
+              <button id="copy-source-code" class="copy-btn">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                Copy Commands
+              </button>
+            </div>
+            <pre class="code-content"><code><span class="code-comment"># 1. Clone repository</span>
+<span class="code-cmd">git clone https://github.com/Araveenp/Squeeze.git</span>
+<span class="code-cmd">cd Squeeze</span>
+
+<span class="code-comment"># 2. Install dependencies</span>
+<span class="code-cmd">py -m pip install -r requirements.txt</span>
+
+<span class="code-comment"># 3. Launch background tray app</span>
+<span class="code-cmd">pythonw app.py</span></code></pre>
+          </div>
+
+          <a href="https://github.com/Araveenp/Squeeze" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="width: 100%;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            Explore Source on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img src="icon.png" alt="Squeeze" style="width: 20px; height: 20px; border-radius: 4px;" />
+        <span class="footer-copy">© 2026 Squeeze. Created by Araveen. Released under MIT License.</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#hero">Back to Top</a></li>
+        <li><a href="https://github.com/Araveenp/Squeeze" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://github.com/Araveenp/Squeeze/releases" target="_blank" rel="noopener noreferrer">Releases</a></li>
+        <li><a href="https://github.com/Araveenp/Squeeze/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">License</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
