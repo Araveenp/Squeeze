@@ -1,0 +1,24 @@
+# Build and distribution directories
+build/
+dist/
+*.spec
+SqueezeSetup.exe
+*.exe
+
+# Virtual environments
+.venv/
+.venv_build/
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE and OS files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini

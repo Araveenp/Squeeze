@@ -1,0 +1,4 @@
+PySide6-Essentials
+Pillow
+pymupdf
+pillow-heif
