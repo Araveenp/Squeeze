@@ -1,4 +1,4 @@
-# Squeeze 🍋
+<img width="460" height="500" alt="Menuicon" src="https://github.com/user-attachments/assets/0805481a-0f57-4211-9e20-6618471e2335" /># Squeeze 🍋
 
 > Instant Windows file compression. Drag any file, hold Shift, drop on a wedge.
 
@@ -7,6 +7,7 @@
 
 Drag a file in Explorer (or on the Desktop), press **Shift**, and drop it on a wedge.
 A compressed copy is saved next to the original as `name_compressed.ext`. Originals are never changed or moved.
+<img width="460" height="500" alt="Menuicon" src="https://github.com/user-attachments/assets/bfcf731a-09d1-4c86-bad9-c0c101a1f2fb" />
 
 ## 📥 Download & Install
 1. Download **[SqueezeSetup.exe](https://github.com/Araveenp/Squeeze/releases/latest/download/SqueezeSetup.exe)** from the latest release.
