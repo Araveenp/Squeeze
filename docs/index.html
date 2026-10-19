@@ -66,6 +66,14 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 17V3"></path><path d="m6 11 6 6 6-6"></path><path d="M19 21H5"></path></svg>
           Get Squeeze
         </a>
+        <!-- Hamburger — visible only on mobile -->
+        <button id="nav-hamburger" class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <svg id="hamburger-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
       </div>
     </div>
   </nav>
@@ -520,6 +528,16 @@
       </ul>
     </div>
   </footer>
+
+  <!-- Mobile Navigation Drawer -->
+  <nav id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile navigation">
+    <a href="#showcase" class="mobile-nav-link">Simulator</a>
+    <a href="#highlights" class="mobile-nav-link">Highlights</a>
+    <a href="#wedges" class="mobile-nav-link">The Wedges</a>
+    <a href="#download" class="mobile-nav-link">Download</a>
+    <a href="https://github.com/Araveenp/Squeeze" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">GitHub</a>
+    <a href="https://github.com/Araveenp/Squeeze/releases/latest/download/SqueezeSetup.exe" class="mobile-download-link">⬇ Get Squeeze</a>
+  </nav>
 
   <script src="app.js"></script>
 </body>

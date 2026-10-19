@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSimulator();
   initScrollSpy();
   initCopyButtons();
+  initMobileNav();
 });
 
 // --------------------------------------------------------------------------
@@ -236,4 +237,43 @@ function initCopyButtons() {
       });
     });
   }
+}
+
+// --------------------------------------------------------------------------
+// 5. Mobile Navigation (Hamburger Menu)
+// --------------------------------------------------------------------------
+function initMobileNav() {
+  const hamburgerBtn = document.getElementById('nav-hamburger');
+  const drawer = document.getElementById('mobile-nav-drawer');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  if (!hamburgerBtn || !drawer) return;
+
+  const openIcon = `<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>`;
+  const closeIcon = `<line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/>`;
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'true');
+    if (hamburgerIcon) hamburgerIcon.innerHTML = closeIcon;
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+    if (hamburgerIcon) hamburgerIcon.innerHTML = openIcon;
+  }
+
+  hamburgerBtn.addEventListener('click', () => {
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+
+  // Close drawer when any link inside it is clicked
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => closeDrawer());
+  });
+
+  // Close drawer on resize back to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeDrawer();
+  });
 }
